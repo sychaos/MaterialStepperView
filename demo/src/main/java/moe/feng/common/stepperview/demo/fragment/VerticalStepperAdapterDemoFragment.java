@@ -58,7 +58,9 @@ public class VerticalStepperAdapterDemoFragment extends Fragment implements ISte
 		View inflateView = LayoutInflater.from(context).inflate(R.layout.vertical_stepper_sample_item, parent, false);
 		TextView contentView = inflateView.findViewById(R.id.item_content);
 		contentView.setText(
-				index == 0 ? R.string.content_step_0 : (index == 1 ? R.string.content_step_1 : R.string.content_step_2)
+				index == 0 ? R.string.content_step_0
+						: (index == 1 ? R.string.content_step_1
+						: R.string.content_step_2)
 		);
 		Button nextButton = inflateView.findViewById(R.id.button_next);
 		nextButton.setText(index == size() - 1 ? "Set error text" : getString(android.R.string.ok));
